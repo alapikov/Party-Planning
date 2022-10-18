@@ -1,7 +1,4 @@
 module.exports = {
-    purge: [
-        './src/**/*.{js,ts,jsx,tsx}', 
-    ],
     content: ['./src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         screens: {
@@ -17,7 +14,7 @@ module.exports = {
                 sans: ['Roboto', 'sans-serif'],
             },
             colors: {
-                'blackInk': '#1b1b1b',
+                'blackInk': 'rgb(27, 27, 27)',
             },
         },
     },
