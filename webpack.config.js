@@ -3,7 +3,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: './src/index.tsx',
     output: {
         filename: 'bundle.js',
@@ -29,7 +29,6 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader", 'postcss-loader'],
-                include: path.resolve(__dirname, 'src'),
               },
         ],
     },
@@ -42,8 +41,10 @@ module.exports = {
           }),
     ],
     devServer: {
+        port: '9960',
         static: {       
             directory: path.resolve(__dirname, './dist')
-          }
+        },
+        liveReload: true
     },
 }

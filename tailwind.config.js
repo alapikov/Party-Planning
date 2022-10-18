@@ -1,16 +1,25 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./dist/*.html'],
-  content: [
-    './App.tsx',
-    './comps/**/*.{tsx}',
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'blackInk': '#1b1b1b',
-      },
+    purge: [
+        './src/**/*.{js,ts,jsx,tsx}', 
+    ],
+    content: ['./src/**/*.{js,ts,jsx,tsx}'],
+    theme: {
+        screens: {
+            'spLG': '440px',
+            'tb': '768px',
+            'tn': '1025px',
+            'sm': '1200px',
+            'rg': '1360px',
+            'md': '1600px',
+        },
+        extend: {
+            fontFamily: {
+                sans: ['Roboto', 'sans-serif'],
+            },
+            colors: {
+                'blackInk': '#1b1b1b',
+            },
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 }
