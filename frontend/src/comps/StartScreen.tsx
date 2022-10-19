@@ -8,6 +8,10 @@ export default function StartScreen() {
         setTimeout(() => {
             setStyles('w-full bg-white h-full fixed z-50 startScreen')
         }, 800);
+        setTimeout(() => {
+            const startScreen = document.getElementById('startScreen')
+            startScreen.remove()
+        }, 1900);
     })
 
     return (
