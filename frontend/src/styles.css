@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 #app {
     width: 100%;
 }
 
 body {
-    color: rgb(27, 27, 27);
+    color: rgb(48, 48, 48);
     background-color: #fff;
     overflow-x: hidden;
     text-align: center;
@@ -22,7 +22,7 @@ body {
 
 #heroCap {
     opacity: 0;
-    transform: translateY(-6vw);
+    transform: translateY(-8vw);
     transition-property: opacity, transform;
 }
 
@@ -43,21 +43,90 @@ body {
 .startScreen {
     opacity: 0 !important;
     transition-property: opacity;
-    transition-duration: 1s ;
+    transition-duration: 1.3s ;
     transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
     transition-delay: 0s;
 }
 
 #table {
     width: 100%;
-    border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 3.7vw;
+    box-shadow: 0px 6px 15px rgb(168, 168, 168);
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    #table {
+        width: 680px;
+        font-size: 1.3rem;
+        border-radius: 25px;
+    }  
+}
+
+@media (min-width: 1024px) {
+    #table {
+        width: 680px;
+        font-size: 18px;
+        border-radius: 25px;
+    }  
+}
+
+@media (min-width: 768px) {
+    #tableCellTL {
+        border-top-left-radius: 25px;
+    }
+    #tableCellTR {
+        border-top-right-radius: 25px;
+    }
+    #tableCellBL {
+        border-bottom-left-radius: 25px;
+    } 
+    #tableCellBR {
+        border-bottom-right-radius: 25px;
+    } 
+}
+
+thead tr th {
+    background-color: rgb(255, 255, 255);
+    height: 12vw;
+}
+
+@media (min-width: 768px) {
+    thead tr th {
+        height: 20px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    thead tr th {
+        height: 16px; 
+    }
+}
+
+tr:nth-of-type(even) {
+    background-color: rgb(255, 241, 194);
+}
+
+tr:nth-of-type(odd) {
+    background-color: rgb(240, 240, 240);
+}
+
+tr {
+    height: 10vw;
+}
+
+@media (min-width: 768px) {
+    tr {
+        height: 56px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    tr {
+        height: 50px; 
+    }
 }
 
 td {
     width: 33.3%;
-}
-
-.tableHeadCell {
-    background-color: rgb(255, 234, 138);
 }

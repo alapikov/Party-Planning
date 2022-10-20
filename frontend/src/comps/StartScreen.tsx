@@ -7,7 +7,7 @@ export default function StartScreen() {
     useEffect(() => {
         setTimeout(() => {
             setStyles('w-full bg-white h-full fixed z-50 startScreen')
-        }, 800);
+        }, 650);
         setTimeout(() => {
             const startScreen = document.getElementById('startScreen')
             startScreen.remove()
