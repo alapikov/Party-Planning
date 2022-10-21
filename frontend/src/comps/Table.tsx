@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
 
 export default function Table() {
     return (
-        <div className='w-full'>
-            <table id='table'>
+        <div className="w-full">
+            <table id="table">
                 <thead>
                     <tr>
-                        <th id='tableCellTL'>Гость</th>
+                        <th id="tableCellTL">Гость</th>
                         <th>Покупка</th>
-                        <th id='tableCellTR'>Стоимость</th>
+                        <th id="tableCellTR">Стоимость</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,12 +48,12 @@ export default function Table() {
                         <td>Mexico</td>
                     </tr>
                     <tr>
-                        <td id='tableCellBL'>Centro</td>
+                        <td id="tableCellBL">Centro</td>
                         <td>Francisco</td>
-                        <td id='tableCellBR'>Mexico</td>
+                        <td id="tableCellBR">Mexico</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-    )
+    );
 }
