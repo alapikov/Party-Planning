@@ -20,6 +20,11 @@ body {
     align-items: center;
 }
 
+.dark body {
+    background-color: hsl(213, 53%, 8%);
+    color: hsl(0, 0%, 100%);
+}
+
 #heroCap {
     opacity: 0;
     transform: translateY(-8vw);
@@ -53,6 +58,10 @@ body {
     font-size: 3.7vw;
     box-shadow: 0px 6px 15px rgb(168, 168, 168);
     margin: auto;
+}
+
+.dark #table {
+    box-shadow: 0px 8px 20px hsl(213, 53%, 2%);
 }
 
 @media (min-width: 768px) {
@@ -89,6 +98,11 @@ body {
 thead tr th {
     background-color: rgb(255, 255, 255);
     height: 12vw;
+    font-weight: 600;
+}
+
+.dark thead tr th {
+    background-color: hsl(213, 53%, 8%);
 }
 
 @media (min-width: 768px) {
@@ -104,15 +118,30 @@ thead tr th {
 }
 
 tr:nth-of-type(even) {
-    background-color: rgb(255, 241, 194);
+    background-color: hsl(46, 100%, 87%);
+}
+
+.dark tr:nth-of-type(even) {
+    background-color: hsl(46, 60%, 16%);
 }
 
 tr:nth-of-type(odd) {
-    background-color: rgb(240, 240, 240);
+    background-color: hsl(0, 0%, 93%);
+}
+
+.dark tr:nth-of-type(odd) {
+    background-color: hsl(215, 27%, 15%);
 }
 
 tr {
     height: 10vw;
+    filter: brightness(100%);
+    transition: filter 0.85s cubic-bezier(0.3, 0, 0.7, 1) 0s;
+}
+
+tr:hover {
+    filter: brightness(105%);
+    transition: filter 0.3s cubic-bezier(0.5, 0, 0.5, 1) 0s;
 }
 
 @media (min-width: 768px) {
@@ -129,4 +158,22 @@ tr {
 
 td {
     width: 33.3%;
+}
+
+.onhoverColorTrans {
+    transition: color 0.85s cubic-bezier(0.3, 0, 0.7, 1) 0s;
+}
+
+.onhoverColorTrans:hover {
+    transition: color 0.3s cubic-bezier(0.5, 0, 0.5, 1) 0s;
+}
+
+.onhoverDim {
+    filter: brightness(100%);
+    transition: filter 0.85s cubic-bezier(0.3, 0, 0.7, 1) 0s;
+}
+
+.onhoverDim:hover {
+    filter: brightness(85%);
+    transition: filter 0.3s cubic-bezier(0.5, 0, 0.5, 1) 0s;
 }
